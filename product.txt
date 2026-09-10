@@ -1,0 +1,412 @@
+CREATE TABLE Product (
+    Product_ID INT PRIMARY KEY,
+    Product_Name VARCHAR(50) NOT NULL,
+    Category_ID INT,
+    Price DECIMAL(10,2),
+    MOQ INT NOT NULL,
+    Listing_Type VARCHAR(20),
+    Key_Features VARCHAR(100),
+    Units_Sold INT,
+    Stock INT,
+    FOREIGN KEY (Category_ID) REFERENCES Category(Category_ID)
+);
+Table created.
+
+insert into Product VALUES (101, 'JBL Earbuds', 1, 2499.00, 10, 'Wholesale', 'Bluetooth 
+wireless earbuds', 250, 50);
+1 row created.
+insert into Product VALUES (102, 'Bluetooth Speaker', 1, 3999.00, 5, 'Wholesale', 'Portable 
+wireless speaker', 180, 30);
+1 row created.
+insert into Product VALUES (103, 'Wireless Headphones', 1, 5999.00, 5, 'Wholesale', 'Noise 
+cancelling headphones', 120, 20);
+1 row created.
+insert into Product VALUES (104, 'Cotton Shirt', 2, 999.00, 10, 'Wholesale', 'Comfortable 
+cotton shirt', 150, 40);
+1 row created.
+insert into Product VALUES (105, 'Denim Jeans', 2, 1499.00, 10, 'Wholesale', 'Blue Denim
+ jeans', 100, 25);
+1 row created.
+insert into Product VALUES (106, 'Python Programming Book', 3, 699.00, 5, 'Wholesale', 'Python 
+programming guide', 80, 15);
+1 row created.
+insert into Product VALUES (107, 'DBMS Fundamentals', 3, 799.00, 5, 'Wholesale', 'Database 
+management book', 70, 20);
+1 row created.
+insert into Product VALUES (108, 'Mixer Grinder', 4, 3499.00, 5, 'Wholesale', 
+'Kitchen mixer grinder', 60, 10);
+1 row created.
+insert into Product VALUES (109, 'Electric Kettle', 4, 1999.00, 5, 'Wholesale', 'Stainless 
+steel electric kettle', 90, 18);
+1 row created.
+insert into Product VALUES (110, 'Football', 5, 899.00, 10, 'Wholesale', 'Professional 
+football', 130, 35);
+1 row created.
+
+commit;
+
+SELECT * FROM Product;
+
+PRODUCT_ID PRODUCT_NAME                                       CATEGORY_ID
+---------- -------------------------------------------------- -----------
+     PRICE        MOQ LISTING_TYPE
+---------- ---------- --------------------
+KEY_FEATURES
+--------------------------------------------------------------------------------
+UNITS_SOLD      STOCK
+---------- ----------
+       101 JBL Earbuds                                   1
+      2499         10 Wholesale
+Bluetooth wireless earbuds
+       250         50
+
+
+PRODUCT_ID PRODUCT_NAME                                       CATEGORY_ID
+---------- -------------------------------------------------- -----------
+     PRICE        MOQ LISTING_TYPE
+---------- ---------- --------------------
+KEY_FEATURES
+--------------------------------------------------------------------------------
+UNITS_SOLD      STOCK
+---------- ----------
+       102 Bluetooth Speaker                             1
+      3999          5 Wholesale
+Portable wireless speaker
+       180         30
+
+
+PRODUCT_ID PRODUCT_NAME                                       CATEGORY_ID
+---------- -------------------------------------------------- -----------
+     PRICE        MOQ LISTING_TYPE
+---------- ---------- --------------------
+KEY_FEATURES
+--------------------------------------------------------------------------------
+UNITS_SOLD      STOCK
+---------- ----------
+       103 Wireless Headphones                           1
+      5999          5 Wholesale
+Noise cancelling headphones
+       120         20
+
+
+PRODUCT_ID PRODUCT_NAME                                       CATEGORY_ID
+---------- -------------------------------------------------- -----------
+     PRICE        MOQ LISTING_TYPE
+---------- ---------- --------------------
+KEY_FEATURES
+--------------------------------------------------------------------------------
+UNITS_SOLD      STOCK
+---------- ----------
+       104 Cotton Shirt                                  2
+       999         10 Wholesale
+Comfortable cotton shirt
+       150         40
+
+
+PRODUCT_ID PRODUCT_NAME                                       CATEGORY_ID
+---------- -------------------------------------------------- -----------
+     PRICE        MOQ LISTING_TYPE
+---------- ---------- --------------------
+KEY_FEATURES
+--------------------------------------------------------------------------------
+UNITS_SOLD      STOCK
+---------- ----------
+       105 Denim Jeans                                   2
+      1499         10 Wholesale
+Blue denim jeans
+       100         25
+
+
+PRODUCT_ID PRODUCT_NAME                                       CATEGORY_ID
+---------- -------------------------------------------------- -----------
+     PRICE        MOQ LISTING_TYPE
+---------- ---------- --------------------
+KEY_FEATURES
+--------------------------------------------------------------------------------
+UNITS_SOLD      STOCK
+---------- ----------
+       106 Python Programming Book                       3
+       699          5 Wholesale
+Python programming guide
+        80         15
+
+
+PRODUCT_ID PRODUCT_NAME                                       CATEGORY_ID
+---------- -------------------------------------------------- -----------
+     PRICE        MOQ LISTING_TYPE
+---------- ---------- --------------------
+KEY_FEATURES
+--------------------------------------------------------------------------------
+UNITS_SOLD      STOCK
+---------- ----------
+       107 DBMS Fundamentals                             3
+       799          5 Wholesale
+Database management book
+        70         20
+
+
+PRODUCT_ID PRODUCT_NAME                                       CATEGORY_ID
+---------- -------------------------------------------------- -----------
+     PRICE        MOQ LISTING_TYPE
+---------- ---------- --------------------
+KEY_FEATURES
+--------------------------------------------------------------------------------
+UNITS_SOLD      STOCK
+---------- ----------
+       108 Mixer Grinder                                 4
+      3499          5 Wholesale
+Kitchen mixer grinder
+        60         10
+
+
+PRODUCT_ID PRODUCT_NAME                                       CATEGORY_ID
+---------- -------------------------------------------------- -----------
+     PRICE        MOQ LISTING_TYPE
+---------- ---------- --------------------
+KEY_FEATURES
+--------------------------------------------------------------------------------
+UNITS_SOLD      STOCK
+---------- ----------
+       109 Electric Kettle                               4
+      1999          5 Wholesale
+Stainless steel electric kettle
+        90         18
+
+
+PRODUCT_ID PRODUCT_NAME                                       CATEGORY_ID
+---------- -------------------------------------------------- -----------
+     PRICE        MOQ LISTING_TYPE
+---------- ---------- --------------------
+KEY_FEATURES
+--------------------------------------------------------------------------------
+UNITS_SOLD      STOCK
+---------- ----------
+       110 Football                                      5
+       899         10 Wholesale
+Professional football
+       130         35
+
+
+10 rows selected.
+
+UPDATE Product
+SET Price = 2299.00
+WHERE Product_ID = 101;
+1 row updated.
+
+SELECT * FROM Product
+WHERE Product_ID = 101;
+
+PRODUCT_ID PRODUCT_NAME                                       CATEGORY_ID
+---------- -------------------------------------------------- -----------
+     PRICE        MOQ LISTING_TYPE
+---------- ---------- --------------------
+KEY_FEATURES
+--------------------------------------------------------------------------------
+UNITS_SOLD      STOCK
+---------- ----------
+       101 JBL Earbuds                                   1
+      2299         10 Wholesale
+Bluetooth wireless earbuds
+       250         50
+
+UPDATE Product
+SET Stock = 60
+WHERE Product_ID = 101;
+1 row updated.
+
+commit;
+
+DELETE FROM Product
+WHERE Product_ID = 110;
+1 row deleted.
+
+SELECT * FROM Product;
+PRODUCT_ID PRODUCT_NAME                                       CATEGORY_ID
+---------- -------------------------------------------------- -----------
+     PRICE        MOQ LISTING_TYPE
+---------- ---------- --------------------
+KEY_FEATURES
+--------------------------------------------------------------------------------
+UNITS_SOLD      STOCK
+---------- ----------
+       101 JBL Earbuds                                   1
+      2299         10 Wholesale
+Bluetooth wireless earbuds
+       250         60
+
+
+PRODUCT_ID PRODUCT_NAME                                       CATEGORY_ID
+---------- -------------------------------------------------- -----------
+     PRICE        MOQ LISTING_TYPE
+---------- ---------- --------------------
+KEY_FEATURES
+--------------------------------------------------------------------------------
+UNITS_SOLD      STOCK
+---------- ----------
+       102 Bluetooth Speaker                             1
+      3999          5 Wholesale
+Portable wireless speaker
+       180         30
+
+
+PRODUCT_ID PRODUCT_NAME                                       CATEGORY_ID
+---------- -------------------------------------------------- -----------
+     PRICE        MOQ LISTING_TYPE
+---------- ---------- --------------------
+KEY_FEATURES
+--------------------------------------------------------------------------------
+UNITS_SOLD      STOCK
+---------- ----------
+       103 Wireless Headphones                           1
+      5999          5 Wholesale
+Noise cancelling headphones
+       120         20
+
+
+PRODUCT_ID PRODUCT_NAME                                       CATEGORY_ID
+---------- -------------------------------------------------- -----------
+     PRICE        MOQ LISTING_TYPE
+---------- ---------- --------------------
+KEY_FEATURES
+--------------------------------------------------------------------------------
+UNITS_SOLD      STOCK
+---------- ----------
+       104 Cotton Shirt                                  2
+       999         10 Wholesale
+Comfortable cotton shirt
+       150         40
+
+
+PRODUCT_ID PRODUCT_NAME                                       CATEGORY_ID
+---------- -------------------------------------------------- -----------
+     PRICE        MOQ LISTING_TYPE
+---------- ---------- --------------------
+KEY_FEATURES
+--------------------------------------------------------------------------------
+UNITS_SOLD      STOCK
+---------- ----------
+       105 Denim Jeans                                   2
+      1499         10 Wholesale
+Blue denim jeans
+       100         25
+
+
+PRODUCT_ID PRODUCT_NAME                                       CATEGORY_ID
+---------- -------------------------------------------------- -----------
+     PRICE        MOQ LISTING_TYPE
+---------- ---------- --------------------
+KEY_FEATURES
+--------------------------------------------------------------------------------
+UNITS_SOLD      STOCK
+---------- ----------
+       106 Python Programming Book                       3
+       699          5 Wholesale
+Python programming guide
+        80         15
+
+
+PRODUCT_ID PRODUCT_NAME                                       CATEGORY_ID
+---------- -------------------------------------------------- -----------
+     PRICE        MOQ LISTING_TYPE
+---------- ---------- --------------------
+KEY_FEATURES
+--------------------------------------------------------------------------------
+UNITS_SOLD      STOCK
+---------- ----------
+       107 DBMS Fundamentals                             3
+       799          5 Wholesale
+Database management book
+        70         20
+
+
+PRODUCT_ID PRODUCT_NAME                                       CATEGORY_ID
+---------- -------------------------------------------------- -----------
+     PRICE        MOQ LISTING_TYPE
+---------- ---------- --------------------
+KEY_FEATURES
+--------------------------------------------------------------------------------
+UNITS_SOLD      STOCK
+---------- ----------
+       108 Mixer Grinder                                 4
+      3499          5 Wholesale
+Kitchen mixer grinder
+        60         10
+
+
+PRODUCT_ID PRODUCT_NAME                                       CATEGORY_ID
+---------- -------------------------------------------------- -----------
+     PRICE        MOQ LISTING_TYPE
+---------- ---------- --------------------
+KEY_FEATURES
+--------------------------------------------------------------------------------
+UNITS_SOLD      STOCK
+---------- ----------
+       109 Electric Kettle                               4
+      1999          5 Wholesale
+Stainless steel electric kettle
+        90         18
+
+
+9 rows selected.
+
+SELECT
+    Category.Category_Name,
+    Product.Product_Name,
+    Product.Price,
+    Product.Stock
+FROM Category
+JOIN Product
+ON Category.Category_ID = Product.Category_ID;
+
+CATEGORY_NAME
+----------------------------------------
+PRODUCT_NAME                                            PRICE        STOCK
+-------------------------------------------------- ---------- ----------
+Electronics
+JBL Earbuds                                              2299           60
+
+Electronics
+Bluetooth Speaker                                        3999           30
+
+Electronics
+Wireless Headphones                                      5999           20
+
+
+CATEGORY_NAME
+----------------------------------------
+PRODUCT_NAME                                            PRICE        STOCK
+-------------------------------------------------- ---------- ----------
+Clothing
+Cotton Shirt                                              999           40
+
+Clothing
+Denim Jeans                                              1499           25
+
+Books
+Python Programming Book                                   699           15
+
+
+CATEGORY_NAME
+----------------------------------------
+PRODUCT_NAME                                            PRICE        STOCK
+-------------------------------------------------- ---------- ----------
+Books
+DBMS Fundamentals                                         799           20
+
+Home Appliances
+Mixer Grinder                                            3499           10
+
+Home Appliances
+Electric Kettle                                          1999           18
+
+
+CATEGORY_NAME
+----------------------------------------
+PRODUCT_NAME                                            PRICE        STOCK
+-------------------------------------------------- ---------- ----------
+Sports
+Football                                                  899           35
+
+
+10 rows selected.

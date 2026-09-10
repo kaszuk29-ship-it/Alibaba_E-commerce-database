@@ -1,0 +1,140 @@
+create table Category(
+  2  Category_ID int primary key,
+  3  Category_name varchar(40) unique,
+  4  Description varchar(40)
+  5  );
+
+Table created.
+
+INSERT INTO Category VALUES (1, 'Electronics', 'Electronic devices and accessories');
+1 row created.
+INSERT INTO Category VALUES (2, 'Clothing', 'Men and women clothing products');
+1 row created.
+INSERT INTO Category VALUES (3, 'Books', 'Books and educational materials');
+1 row created.
+INSERT INTO Category VALUES (4, 'Home Appliances', 'Appliances used at home');
+1 row created.
+INSERT INTO Category VALUES (5, 'Sports', 'Sports equipment and accessories');
+1 row created.
+INSERT INTO Category VALUES (6, 'Beauty', 'Beauty and personal care products');
+1 row created.
+INSERT INTO Category VALUES (7, 'Groceries', 'Daily food and grocery products');
+1 row created.
+INSERT INTO Category VALUES (8, 'Furniture', 'Home and office furniture');
+1 row created.
+INSERT INTO Category VALUES (9, 'Toys', 'Toys and games for children');
+1 row created.
+INSERT INTO Category VALUES (10, 'Footwear', 'Shoes, sandals and other footwear');
+1 row created.
+
+commit;
+
+CREATE TABLE Category (
+    Category_ID INT PRIMARY KEY,
+    Category_Name VARCHAR(40) UNIQUE,
+    Description VARCHAR(40)
+);
+
+INSERT INTO Category VALUES (1, 'Electronics', 'Electronic devices and accessories');
+INSERT INTO Category VALUES (2, 'Clothing', 'Men and women clothing products');
+INSERT INTO Category VALUES (3, 'Books', 'Books and educational materials');
+INSERT INTO Category VALUES (4, 'Home Appliances', 'Appliances used at home');
+INSERT INTO Category VALUES (5, 'Sports', 'Sports equipment and accessories');
+INSERT INTO Category VALUES (6, 'Beauty', 'Beauty and personal care products');
+INSERT INTO Category VALUES (7, 'Groceries', 'Daily food and grocery products');
+INSERT INTO Category VALUES (8, 'Furniture', 'Home and office furniture');
+INSERT INTO Category VALUES (9, 'Toys', 'Toys and games for children');
+INSERT INTO Category VALUES (10, 'Footwear', 'Shoes, sandals and other footwear');
+
+COMMIT;
+
+CREATE TABLE Category (
+    Category_ID INT PRIMARY KEY,
+    Category_Name VARCHAR(40) UNIQUE,
+    Description VARCHAR(40)
+);
+
+INSERT INTO Category VALUES (1, 'Electronics', 'Electronic devices and accessories');
+INSERT INTO Category VALUES (2, 'Clothing', 'Men and women clothing products');
+INSERT INTO Category VALUES (3, 'Books', 'Books and educational materials');
+INSERT INTO Category VALUES (4, 'Home Appliances', 'Appliances used at home');
+INSERT INTO Category VALUES (5, 'Sports', 'Sports equipment and accessories');
+INSERT INTO Category VALUES (6, 'Beauty', 'Beauty and personal care products');
+INSERT INTO Category VALUES (7, 'Groceries', 'Daily food and grocery products');
+INSERT INTO Category VALUES (8, 'Furniture', 'Home and office furniture');
+INSERT INTO Category VALUES (9, 'Toys', 'Toys and games for children');
+INSERT INTO Category VALUES (10, 'Footwear', 'Shoes, sandals and other footwear');
+
+COMMIT;
+
+CREATE TABLE Category (
+    Category_ID INT PRIMARY KEY,
+    Category_Name VARCHAR(40) UNIQUE,
+    Description VARCHAR(40)
+);
+
+INSERT INTO Category VALUES (1, 'Electronics', 'Electronic devices and accessories');
+INSERT INTO Category VALUES (2, 'Clothing', 'Men and women clothing products');
+INSERT INTO Category VALUES (3, 'Books', 'Books and educational materials');
+INSERT INTO Category VALUES (4, 'Home Appliances', 'Appliances used at home');
+INSERT INTO Category VALUES (5, 'Sports', 'Sports equipment and accessories');
+INSERT INTO Category VALUES (6, 'Beauty', 'Beauty and personal care products');
+INSERT INTO Category VALUES (7, 'Groceries', 'Daily food and grocery products');
+INSERT INTO Category VALUES (8, 'Furniture', 'Home and office furniture');
+INSERT INTO Category VALUES (9, 'Toys', 'Toys and games for children');
+INSERT INTO Category VALUES (10, 'Footwear', 'Shoes, sandals and other footwear');
+
+COMMIT;
+
+SELECT * FROM Category;
+CATEGORY_ID CATEGORY_NAME
+----------- ----------------------------------------
+DESCRIPTION
+----------------------------------------
+          1 Electronics
+Electronic devices and accessories
+
+          2 Clothing
+Men and women clothing products
+
+          3 Books
+Books and educational materials
+
+
+CATEGORY_ID CATEGORY_NAME
+----------- ----------------------------------------
+DESCRIPTION
+----------------------------------------
+          4 Home Appliances
+Appliances used at home
+
+          5 Sports
+Sports equipment and accessories
+
+          6 Beauty
+Beauty and personal care products
+
+
+CATEGORY_ID CATEGORY_NAME
+----------- ----------------------------------------
+DESCRIPTION
+----------------------------------------
+          7 Groceries
+Daily food and grocery products
+
+          8 Furniture
+Home and office furniture
+
+          9 Toys
+Toys and games for children
+
+
+CATEGORY_ID CATEGORY_NAME
+----------- ----------------------------------------
+DESCRIPTION
+----------------------------------------
+         10 Footwear
+Shoes, sandals and other footwear
+
+
+10 rows selected.
