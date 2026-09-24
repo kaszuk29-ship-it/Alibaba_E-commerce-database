@@ -5,7 +5,7 @@ A 3rd Semester Skill Project that models and analyzes a B2B wholesale e-commerce
 
 ---
 
-## 📌 Problem Statement
+##  Problem Statement
 
 Alibaba.com is a large-scale B2B wholesale e-commerce platform where thousands of suppliers list products with varying MOQs, prices, and sales volumes. Buyers currently have no structured way to track, compare, and analyze supplier data across multiple listings in one place — making sourcing decisions slow and error-prone.
 
@@ -13,7 +13,7 @@ This project designs and implements a relational database that models a wholesal
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 - Understand how a wholesale product listing functions on a B2B platform
 - Study pricing structure, MOQ patterns, and supplier landscape
@@ -23,7 +23,7 @@ This project designs and implements a relational database that models a wholesal
 
 ---
 
-## 🧑‍🤝‍🧑 Stakeholders
+##  Stakeholders
 
 | Stakeholder | Role |
 |---|---|
@@ -36,7 +36,7 @@ This project designs and implements a relational database that models a wholesal
 
 ---
 
-## 🗂️ Database Design
+##  Database Design
 
 **Core Entities:** `Suppliers`, `Products`, `Customers`, `Orders`
 
@@ -69,7 +69,7 @@ Supplier ──lists──▶ Product ──ordered in──▶ Order ◀──p
 
 ---
 
-## ✅ Business Requirements (Summary)
+##  Business Requirements (Summary)
 
 - Maintain supplier, product, customer, and order records
 - Track units sold per listing and support supplier comparison
@@ -77,7 +77,7 @@ Supplier ──lists──▶ Product ──ordered in──▶ Order ◀──p
 - Enforce data integrity via primary/foreign keys
 - Support reporting and analytics queries
 
-## ⚙️ Functional Requirements (Summary)
+##  Functional Requirements (Summary)
 
 - CRUD operations for Suppliers, Products, Customers, Orders
 - Auto-calculate order totals and update units sold
@@ -85,7 +85,7 @@ Supplier ──lists──▶ Product ──ordered in──▶ Order ◀──p
 - Validate order quantity against MOQ
 - Role-based access (admin vs. buyer)
 
-## 🚦 Non-Functional Requirements (Summary)
+##  Non-Functional Requirements (Summary)
 
 - Fast query response (2–3 sec)
 - Scalable to growing data volume
@@ -95,7 +95,7 @@ Supplier ──lists──▶ Product ──ordered in──▶ Order ◀──p
 
 ---
 
-## 📊 Sample Data (Real Alibaba Listings — JBL Earbuds)
+##  Sample Data (Real Alibaba Listings — JBL Earbuds)
 
 | Supplier | MOQ | Units Sold | Type | Location |
 |---|---|---|---|---|
@@ -112,7 +112,7 @@ Supplier ──lists──▶ Product ──ordered in──▶ Order ◀──p
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Database:** MySQL / Oracle / MS Access *(update based on your implementation)*
 - **Documentation:** Word / Markdown
@@ -120,7 +120,7 @@ Supplier ──lists──▶ Product ──ordered in──▶ Order ◀──p
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 ├── README.md
@@ -136,7 +136,7 @@ Supplier ──lists──▶ Product ──ordered in──▶ Order ◀──p
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ```bash
 # Clone the repository
@@ -152,12 +152,12 @@ mysql -u root -p your_database < database/queries.sql
 
 ---
 
-## 📝 Conclusion
+##  Conclusion
 
 This project demonstrates how a structured relational database can streamline sourcing and sales analysis on a B2B wholesale e-commerce platform. Using JBL Bluetooth earbuds as a case study, it applies core database concepts — entity design, normalization, relationships, and query-based reporting — to a practical, real-world scenario, while also highlighting real business nuances like brand authenticity verification in B2B sourcing.
 
 ---
 
-## 📄 License
+##  License
 
 This project is submitted as part of academic coursework (3rd Semester Skill Project) and is intended for educational purposes only.
